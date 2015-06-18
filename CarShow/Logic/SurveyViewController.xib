@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6751" systemVersion="14C1514" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SurveyViewController">
+            <connections>
+                <outlet property="btnCarType" destination="sWa-fD-hsk" id="Dxg-r1-aCL"/>
+                <outlet property="btnHistory" destination="gq2-kP-tGb" id="04f-y5-pV6"/>
+                <outlet property="btnSurvey" destination="5Fy-zj-axb" id="yUu-QQ-NHm"/>
+                <outlet property="carBGView" destination="muK-rm-xYz" id="qqj-gK-XBJ"/>
+                <outlet property="carPromptImg" destination="FSi-Tk-3Ag" id="6KD-gm-1Oq"/>
+                <outlet property="carTypeMenuScrollView" destination="NgL-3e-pmZ" id="2ka-dl-Ngs"/>
+                <outlet property="carTypeScrollView" destination="OcQ-KJ-J5D" id="vxg-MP-Sdr"/>
+                <outlet property="fordCompanyImg" destination="Joa-Ib-dLa" id="1kp-98-bI5"/>
+                <outlet property="fordHistoryView" destination="kGK-li-Ui4" id="NBM-TH-SVT"/>
+                <outlet property="historyBGView" destination="8Wc-Yo-fIM" id="nHw-td-nGV"/>
+                <outlet property="historyDesc" destination="3qG-nO-U2y" id="xJi-Cz-foL"/>
+                <outlet property="historyFlowView" destination="Ow8-Kv-0JF" id="rNn-XV-wWQ"/>
+                <outlet property="historyPageControl" destination="KR1-Ck-C1x" id="DCq-vX-lzq"/>
+                <outlet property="historyTitle" destination="kgw-EF-mKf" id="AyT-fc-cg0"/>
+                <outlet property="historyType1" destination="Fty-ED-7tL" id="U0o-vF-Rmj"/>
+                <outlet property="historyType2" destination="ykJ-3J-ZwD" id="UfO-iX-1Xq"/>
+                <outlet property="homeBGView" destination="1rT-6o-Pf9" id="ynv-7I-ZHW"/>
+                <outlet property="view" destination="8ZU-gb-t7d" id="HyO-SV-biM"/>
+                <outlet property="webView" destination="5oP-y7-bBz" id="5jV-Ia-phW"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="8ZU-gb-t7d">
+            <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="company_bg.png" translatesAutoresizingMaskIntoConstraints="NO" id="1rT-6o-Pf9">
+                    <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                </imageView>
+                <webView hidden="YES" alpha="0.69999999999999973" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5oP-y7-bBz">
+                    <rect key="frame" x="23" y="78" width="978" height="552"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <connections>
+                        <outlet property="delegate" destination="-1" id="iet-hD-H9a"/>
+                    </connections>
+                </webView>
+                <view tag="111" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8Wc-Yo-fIM">
+                    <rect key="frame" x="23" y="78" width="978" height="600"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kGK-li-Ui4">
+                            <rect key="frame" x="0.0" y="0.0" width="978" height="551"/>
+                            <subviews>
+                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="history.png" translatesAutoresizingMaskIntoConstraints="NO" id="d4F-CZ-ErU">
+                                    <rect key="frame" x="0.0" y="0.0" width="978" height="551"/>
+                                </imageView>
+                                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ow8-Kv-0JF" customClass="PagedFlowView">
+                                    <rect key="frame" x="0.0" y="80" width="978" height="423"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                                <pageControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="KR1-Ck-C1x">
+                                    <rect key="frame" x="329" y="497" width="320" height="37"/>
+                                    <connections>
+                                        <action selector="pageControlValueDidChange:" destination="-1" eventType="valueChanged" id="quE-UY-oU8"/>
+                                    </connections>
+                                </pageControl>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kgw-EF-mKf">
+                                    <rect key="frame" x="322" y="122" width="341" height="21"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <color key="textColor" red="0.12156862745098039" green="0.12156862745098039" blue="0.12156862745098039" alpha="1" colorSpace="calibratedRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3qG-nO-U2y">
+                                    <rect key="frame" x="322" y="410" width="341" height="80"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                    <color key="textColor" red="0.45490196078431372" green="0.46274509803921571" blue="0.45882352941176469" alpha="1" colorSpace="calibratedRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </view>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ford_company.png" translatesAutoresizingMaskIntoConstraints="NO" id="Joa-Ib-dLa">
+                            <rect key="frame" x="0.0" y="7" width="978" height="551"/>
+                        </imageView>
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fty-ED-7tL">
+                            <rect key="frame" x="679" y="565" width="150" height="33"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <state key="normal" title="福特汽车公司" backgroundImage="typeBtnSel.png">
+                                <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="goFuteCompany:" destination="-1" eventType="touchUpInside" id="pfN-T2-2dk"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ykJ-3J-ZwD">
+                            <rect key="frame" x="829" y="565" width="150" height="33"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <state key="normal" title="百年福特" backgroundImage="typeBtn.png">
+                                <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="goBainianFute:" destination="-1" eventType="touchUpInside" id="G0i-RS-PVi"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                </view>
+                <view tag="110" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="muK-rm-xYz">
+                    <rect key="frame" x="23" y="78" width="978" height="600"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="carTypebg.png" translatesAutoresizingMaskIntoConstraints="NO" id="FSi-Tk-3Ag">
+                            <rect key="frame" x="0.0" y="0.0" width="978" height="552"/>
+                        </imageView>
+                        <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OcQ-KJ-J5D">
+                            <rect key="frame" x="0.0" y="0.0" width="978" height="552"/>
+                        </scrollView>
+                        <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NgL-3e-pmZ">
+                            <rect key="frame" x="0.0" y="556" width="978" height="44"/>
+                        </scrollView>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                </view>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Fy-zj-axb">
+                    <rect key="frame" x="11" y="670" width="337" height="70"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <state key="normal" title="贵宾登记" backgroundImage="itemBtn.png">
+                        <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="goSurvey:" destination="-1" eventType="touchUpInside" id="8PG-q0-ylO"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sWa-fD-hsk">
+                    <rect key="frame" x="337" y="670" width="337" height="70"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <state key="normal" title="车型介绍" backgroundImage="itemBtnSel.png">
+                        <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="goCarType:" destination="-1" eventType="touchUpInside" id="csf-ub-i57"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gq2-kP-tGb">
+                    <rect key="frame" x="663" y="670" width="339" height="70"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <state key="normal" title="走进福特" backgroundImage="itemBtn.png">
+                        <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="goHistory:" destination="-1" eventType="touchUpInside" id="kpM-06-OzK"/>
+                    </connections>
+                </button>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="logo.png" translatesAutoresizingMaskIntoConstraints="NO" id="yR1-gh-7HV">
+                    <rect key="frame" x="22" y="32" width="150" height="32"/>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CaJ-IB-MKe">
+                    <rect key="frame" x="716" y="38" width="30" height="30"/>
+                    <state key="normal" title="主页">
+                        <color key="titleColor" red="0.086274509803921567" green="0.10980392156862745" blue="0.12549019607843137" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="doBack:" destination="-1" eventType="touchUpInside" id="xNI-Iy-jX6"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A56-9B-wls">
+                    <rect key="frame" x="772" y="38" width="60" height="30"/>
+                    <state key="normal" title="官方网站">
+                        <color key="titleColor" red="0.56470588235294117" green="0.58039215686274515" blue="0.62352941176470589" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KBw-0O-KCY">
+                    <rect key="frame" x="924" y="38" width="75" height="30"/>
+                    <state key="normal" title="寻找经销商">
+                        <color key="titleColor" red="0.56470588235294117" green="0.58039215686274515" blue="0.62352941176470589" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="titleShadowColor" red="0.5607843137254902" green="0.5725490196078431" blue="0.60392156862745094" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aap-JE-ppO">
+                    <rect key="frame" x="850" y="38" width="60" height="30"/>
+                    <state key="normal" title="申请试驾">
+                        <color key="titleColor" red="0.56470588235294117" green="0.58039215686274515" blue="0.62352941176470589" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="56" y="80"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="carTypebg.png" width="967" height="548"/>
+        <image name="company_bg.png" width="1024" height="768"/>
+        <image name="ford_company.png" width="978" height="551"/>
+        <image name="history.png" width="978" height="552"/>
+        <image name="itemBtn.png" width="339" height="93"/>
+        <image name="itemBtnSel.png" width="340" height="93"/>
+        <image name="logo.png" width="192" height="37"/>
+        <image name="typeBtn.png" width="165" height="34"/>
+        <image name="typeBtnSel.png" width="165" height="34"/>
+    </resources>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>
